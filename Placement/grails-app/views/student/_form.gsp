@@ -1,13 +1,11 @@
 <%@ page import="placement.Student" %>
 
-
-
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'applications', 'error')} ">
-	<label for="applications">
-		<g:message code="student.applications.label" default="Applications" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'name', 'error')} ">
+	<label for="name">
+		<g:message code="student.name.label" default="Name" />
 		
 	</label>
-	<g:textField name="applications" value="${studentInstance?.applications}"/>
+	<g:textField name="name" value="${studentInstance?.name}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'courseCode', 'error')} ">
@@ -18,12 +16,12 @@
 	<g:textField name="courseCode" value="${studentInstance?.courseCode}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'name', 'error')} ">
-	<label for="name">
-		<g:message code="student.name.label" default="Name" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'applications', 'error')} ">
+	<label for="applications">
+		<g:message code="student.applications.label" default="Applications" />
 		
 	</label>
-	<g:textField name="name" value="${studentInstance?.name}"/>
+	<g:textField name="applications" value="${studentInstance?.applications}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'notes', 'error')} ">
