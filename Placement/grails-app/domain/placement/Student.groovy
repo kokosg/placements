@@ -2,9 +2,9 @@ package placement
 
 class Student {
 
-    String Name
-    String CourseCode
-    String Notes
+    String name
+    String courseCode
+    String notes
     static hasMany = [applications: Application]
 
     static constraints = {

@@ -2,9 +2,9 @@ package placement
 
 class PlacementOpportunity {
 
-    String JobTitle
-    String CompanyName
-    String Status
+    String jobTitle
+    String companyName
+    String status
 
     static hasMany = [applications: Application]
 

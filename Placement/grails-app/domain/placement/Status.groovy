@@ -2,8 +2,8 @@ package placement
 
 class Status {
 
-    String Code
-    String Description
+    String code
+    String description
     static hasMany = [applications: Application]
 
     static constraints = {
