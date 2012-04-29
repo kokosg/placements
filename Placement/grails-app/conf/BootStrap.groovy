@@ -7,8 +7,8 @@ class BootStrap {
        def student2 = new Student(name:'Alex',courseCode:'1081',notes:'Finance Student').save()
        def status1 = new Status(code:'Not invited for interview',description:'Check Later').save()
        def status2 = new Status(code:'Applied',description:'Check Later').save()
-       def placement1 = new PlacementOpportunity(companyName:'IBM',jobTitle:'Network Administrator',status:'Available').save()
-       def placement2 = new PlacementOpportunity(companyName:'BT',jobTitle:'Database Administrator',status:'Available').save()
+       def placement1 = new PlacementOpportunity(companyName:'IBM',jobTitle:'Network Administrator',status:'Open').save()
+       def placement2 = new PlacementOpportunity(companyName:'BT',jobTitle:'Database Administrator',status:'Open').save()
        
 
 

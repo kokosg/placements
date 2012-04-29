@@ -1,5 +1,7 @@
 package placement
 
+import grails.converters.*
+
 class ApplyController {
 
  def index() {
@@ -17,7 +19,13 @@ class ApplyController {
        def application1 = new Application(status:status,student: student, placement: jobTitle ).save()
  }
 def listOpenPlacements() {
+  log.debug("listOpenPlacements() - ${params.format}");
     def placements = PlacementOpportunity.findAllByStatus('Open')
-
+  log.debug("Located placements: ${placements}");
+    
+        withFormat{
+            xml { render placements as XML  }
+            json { render placements as JSON }
+        }
 }
 }
