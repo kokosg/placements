@@ -7,6 +7,7 @@ class PlacementOpportunity {
     String status
 
     static hasMany = [applications: Application]
+    static mappedBy = [applications: "placement"]
 
     static constraints = {
     }
