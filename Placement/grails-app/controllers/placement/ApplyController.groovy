@@ -18,7 +18,7 @@ class ApplyController {
 
    log.debug(status)
 
-   def application1 = new Application(status:status,student: student, placement: jobTitle, timestamp: 'hello' )
+   def application1 = new Application(status:status,student: student, placement: jobTitle, timestamp: 'test' )
 
    if (application1.save() ) {
      log.debug("OK");
@@ -27,33 +27,5 @@ class ApplyController {
       log.debug("Error");
    }
  }
-
-def listOpenPlacements() {
-  log.debug("listOpenPlacements() - ${params.format}");
-    def placements = PlacementOpportunity.findAllByStatus('Open')
-  log.debug("Located placements: ${placements}");
-    
-        withFormat{
-            xml { render placements as XML  }
-            json { render placements as JSON }
-        }
-}
-
-def listApplicants() {
-       def jobTitle = PlacementOpportunity.findByJobTitle(params.jobTitle)
-       log.debug("jobTitle..: ${jobTitle} ${jobTitle.applications}");
-       def r = []
-       jobTitle.applications.each { app ->
-          log.debug("jobTitle...: ${app}");
-          r.add([applicantid:app.student.id])
-       }
-
-        log.debug("returning ${r}");
-
-        withFormat{
-            xml { render r as XML  }
-            json { render r as JSON }
-        }
-}
 
 }
