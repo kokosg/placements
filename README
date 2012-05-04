@@ -1,1 +1,15 @@
-Please switch to Release branch to see more details about this application.
+This application tested only at Linux base through the VMware. 
+
+First of all you will need to open a terminal and paste the following command
+<git clone https://kokosg@github.com/kokosg/placements.git> to download the application at your computer. 
+
+Use the commands ls and cd to navigate at placements/Placement directory and checkout what each folder include.
+
+Then select the release branch by typing <git checkout release> which is the newest version of application.
+
+After that you could run the application <grails run-app>. 
+
+At first time it will take some minutes for the grails to load and when it finished, 
+a link will be appear at the terminal. 
+
+Copy/paste the link at your browser and the Placement application will appear with a general overview about it.
