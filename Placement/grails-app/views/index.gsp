@@ -84,14 +84,21 @@
 		<div id="page-body" role="main">
 			<h1>Welcome to placement application</h1>
 			<p></p>
-
+                        <p>This is a web placement application which allows students to check the available jobs, the status and the company name. Students have the chance to apply for the available jobs. In addition, student can check out the Student list and status list which shows further information for each status. Some new features for that application is the very nice a quick navigation between the controller and the availability which application provide between listApplicants and List of Open placements in JSON and XML format.</p>
 			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
+				<h2>Available Controllers</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 					</g:each>
 				</ul>
+<h2>Available Methods (JSON and XML format)</h2>
+					<li class="controller"><g:link controller="PlacementOpportunity" action="listOpenPlacements.json">ListOpenPlacements in JSON</g:link></li>
+					<li class="controller"><g:link controller="PlacementOpportunity" action="listOpenPlacements.xml">ListOpenPlacements in XML</g:link></li>
+					<li class="controller"><g:link controller="PlacementOpportunity" action="listApplicants.json">listApplicants in JSON</g:link></li>
+					<li class="controller"><g:link controller="PlacementOpportunity" action="listApplicants.json">listApplicants in XML</g:link></li>
+
+
 			</div>
 		</div>
 	</body>

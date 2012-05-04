@@ -23,8 +23,7 @@ def listOpenPlacements() {
 }
 
 def listApplicants() {
-       def jobTitle = PlacementOpportunity.findByJobTitle(params.jobTitle)
-       log.debug("jobTitle..: ${jobTitle} ${jobTitle.applications}");
+    def jobTitle = PlacementOpportunity.findByJobTitle('Network Administrator')
        def r = []
        jobTitle.applications.each { app ->
           log.debug("jobTitle...: ${app}");
