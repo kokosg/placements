@@ -96,7 +96,7 @@
 					<li class="controller"><g:link controller="PlacementOpportunity" action="listOpenPlacements.json">ListOpenPlacements in JSON</g:link></li>
 					<li class="controller"><g:link controller="PlacementOpportunity" action="listOpenPlacements.xml">ListOpenPlacements in XML</g:link></li>
 					<li class="controller"><g:link controller="PlacementOpportunity" action="listApplicants.json">listApplicants in JSON</g:link></li>
-					<li class="controller"><g:link controller="PlacementOpportunity" action="listApplicants.json">listApplicants in XML</g:link></li>
+					<li class="controller"><g:link controller="PlacementOpportunity" action="listApplicants.xml">listApplicants in XML</g:link></li>
 
 
 			</div>
